@@ -31,4 +31,10 @@ $CLI.LF()
 
 <img width="634" alt="" src="https://user-images.githubusercontent.com/1725068/223434725-b708fdf0-398c-431f-ba1a-bf77d53f5146.png">
 
+## References
 
+https://blog.4d.com/headless-4d-applications/
+
+https://developer.4d.com/docs/Admin/cli/
+
+https://doc.4d.com/4Dv19/4D/19/Command-Line-Interface.300-5416693.en.html
