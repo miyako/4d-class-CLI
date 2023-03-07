@@ -14,7 +14,11 @@ $CLI:=cs.CLI.new()
 $CLI.print("Hello World"; "red;bold;underline").LF()
 //foreground and background
 $CLI.print("Hello World"; "red;yellow;bold;underline").LF()
+```
 
+<img width="634" alt="" src="https://user-images.githubusercontent.com/1725068/223435308-4fb3bf62-80cc-4d34-b928-e44c81237a0c.png">
+
+```4d
 $CLI.LF()
 
 //16-bit color
