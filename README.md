@@ -3,7 +3,7 @@ LOG EVENT wrapper class
 
 ## 8-bit and 16-bit colours
 
-A Simple API to print [ASCII escape code](https://en.wikipedia.org/wiki/ANSI_escape_code)
+A Simple API to print [ASCII escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).
 
 ```4d
 var $CLI : cs.CLI
