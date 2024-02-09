@@ -1,3 +1,5 @@
+![version](https://img.shields.io/badge/version-20%2B-E23089)
+
 # 4d-class-CLI
 LOG EVENT wrapper class
 
