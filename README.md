@@ -1,7 +1,11 @@
-# 4d-class-CLI
-LOG EVENT wrapper class
+![version](https://img.shields.io/badge/version-20%2B-E23089)
+![platform](https://img.shields.io/static/v1?label=platform&message=mac-intel%20|%20mac-arm%20|%20win-64&color=blue)
+[![license](https://img.shields.io/github/license/miyako/4d-class-CLI)](LICENSE)
+![downloads](https://img.shields.io/github/downloads/miyako/4d-class-CLI/total)
 
-## 8-bit and 16-bit colours
+`LOG EVENT` wrapper class.
+
+# 8-bit and 16-bit colours
 
 A Simple API to print [ASCII escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).
 
@@ -31,7 +35,7 @@ $CLI.LF()
 
 <img width="634" alt="" src="https://user-images.githubusercontent.com/1725068/223434725-b708fdf0-398c-431f-ba1a-bf77d53f5146.png">
 
-## References
+# References
 
 https://blog.4d.com/headless-4d-applications/
 
