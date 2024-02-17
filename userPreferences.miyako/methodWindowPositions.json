@@ -1,0 +1,20 @@
+{
+	"Sources/Classes/CLI.4dm": {
+		"left": 774,
+		"top": 258,
+		"width": 965,
+		"height": 795
+	},
+	"Sources/Methods/TEST.4dm": {
+		"left": 530,
+		"top": 185,
+		"width": 965,
+		"height": 587
+	},
+	"Sources/DatabaseMethods/onStartup.4dm": {
+		"left": 571,
+		"top": 299,
+		"width": 778,
+		"height": 460
+	}
+}
