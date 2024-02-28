@@ -20,7 +20,7 @@ $CLI.print("Hello World"; "red;bold;underline").LF()
 $CLI.print("Hello World"; "red;yellow;bold;underline").LF()
 ```
 
-<img width="634" alt="" src="https://user-images.githubusercontent.com/1725068/223435308-4fb3bf62-80cc-4d34-b928-e44c81237a0c.png">
+<img src="https://user-images.githubusercontent.com/1725068/223435308-4fb3bf62-80cc-4d34-b928-e44c81237a0c.png" style="height:180px;width:auto;" />
 
 ```4d
 $CLI.LF()
@@ -33,7 +33,7 @@ End for
 $CLI.LF()
 ```
 
-<img width="634" alt="" src="https://user-images.githubusercontent.com/1725068/223434725-b708fdf0-398c-431f-ba1a-bf77d53f5146.png">
+<img src="https://user-images.githubusercontent.com/1725068/223434725-b708fdf0-398c-431f-ba1a-bf77d53f5146.png" style="height:360px;width:auto;" />
 
 # References
 
