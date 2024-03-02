@@ -31,15 +31,6 @@ Class constructor
 	This:C1470.CURSOR.RIGHT:="C"
 	This:C1470.CURSOR.LEFT:="D"
 	
-Function _cursor($units : Integer; $code : Text)->$this : cs:C1710.CLI
-	
-	If ($units>0)
-		$ANSI:=This:C1470.ASCII.ESC+"["+String:C10($units)+$code
-		$this:=This:C1470.print($ANSI)
-	Else 
-		$this:=This:C1470
-	End if 
-	
 Function CR()->$this : cs:C1710.CLI
 	
 	$this:=This:C1470.print(This:C1470.ASCII.CR)
@@ -67,6 +58,49 @@ Function hideCursor()->$this : cs:C1710.CLI
 Function showCursor()->$this : cs:C1710.CLI
 	
 	$this:=This:C1470.print(This:C1470.ASCII.ESC+"[?25h")
+	
+Function escape($message : Text; $style : Text)->$ANSI : Text
+	
+	$ANSI:=This:C1470._style($style).combine(This:C1470._color($style)).join(";")
+	
+	If ($ANSI#"")
+		$ANSI:=This:C1470.ASCII.ESC+"["+$ANSI+"m"+$message+This:C1470.RESET
+	Else 
+		$ANSI:=$message
+	End if 
+	
+Function logo()->$CLI : cs:C1710.CLI
+	
+	$CLI:=This:C1470
+	
+	$logo:=File:C1566("/RESOURCES/logo.txt").getText("us-ascii"; Document with CR:K24:21)
+	$lines:=Split string:C1554($logo; "\r")
+	
+	For each ($line; $lines)
+		$CLI.print($line; "117;18;bold").LF()
+	End for each 
+	
+Function print($message : Text; $style : Text)->$this : cs:C1710.CLI
+	
+	$ANSI:=This:C1470.escape($message; $style)
+	
+	LOG EVENT:C667(Into system standard outputs:K38:9; $ANSI; Information message:K38:1)
+	
+	$this:=This:C1470
+	
+Function version()->$CLI : cs:C1710.CLI
+	
+	$CLI:=This:C1470
+	
+	var $build : Integer
+	$version:=Application version:C493($build)
+	
+	$code:=Split string:C1554($version; "")
+	$name:=(($code[2]="0") ? ("v"+$code[0]+$code[1]+"."+$code[3]) : ("v"+$code[0]+$code[1]+" R"+$code[2]))
+	
+	$version:=New collection:C1472($name; $build).join(".")
+	
+	$CLI.print($version; "231;bold").LF()
 	
 Function _color($color : Text)->$ANSI : Collection
 	
@@ -157,6 +191,15 @@ Function _color($color : Text)->$ANSI : Collection
 		End case 
 	End for each 
 	
+Function _cursor($units : Integer; $code : Text)->$this : cs:C1710.CLI
+	
+	If ($units>0)
+		$ANSI:=This:C1470.ASCII.ESC+"["+String:C10($units)+$code
+		$this:=This:C1470.print($ANSI)
+	Else 
+		$this:=This:C1470
+	End if 
+	
 Function _style($style : Text)->$ANSI : Collection
 	
 	$ANSI:=New collection:C1472
@@ -176,21 +219,3 @@ Function _style($style : Text)->$ANSI : Collection
 				$ANSI.push(This:C1470.STYLE.REVERSED)
 		End case 
 	End for each 
-	
-Function escape($message : Text; $style : Text)->$ANSI : Text
-	
-	$ANSI:=This:C1470._style($style).combine(This:C1470._color($style)).join(";")
-	
-	If ($ANSI#"")
-		$ANSI:=This:C1470.ASCII.ESC+"["+$ANSI+"m"+$message+This:C1470.RESET
-	Else 
-		$ANSI:=$message
-	End if 
-	
-Function print($message : Text; $style : Text)->$this : cs:C1710.CLI
-	
-	$ANSI:=This:C1470.escape($message; $style)
-	
-	LOG EVENT:C667(Into system standard outputs:K38:9; $ANSI; Information message:K38:1)
-	
-	$this:=This:C1470
