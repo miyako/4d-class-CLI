@@ -35,7 +35,7 @@ $CLI.LF()
 
 <img src="https://user-images.githubusercontent.com/1725068/223434725-b708fdf0-398c-431f-ba1a-bf77d53f5146.png" style="height:360px;width:auto;" />
 
-* progress indicator
+# Progress indicator
 
 ```4d
 var $CLI : cs.CLI
