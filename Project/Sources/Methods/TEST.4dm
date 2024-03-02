@@ -3,6 +3,12 @@ var $CLI : cs:C1710.CLI
 
 $CLI:=cs:C1710.CLI.new()
 
+//$CLI.clear().home()
+
+For ($i; 1; 100)
+	$CLI.CR().EL().print(String:C10($i; "^^0")+"%%"; "red;bold;underline").LF()
+End for 
+
 //foreground
 $CLI.print("Hello World"; "red;bold;underline").LF()
 //foreground and background
