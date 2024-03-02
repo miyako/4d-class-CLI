@@ -35,6 +35,27 @@ $CLI.LF()
 
 <img src="https://user-images.githubusercontent.com/1725068/223434725-b708fdf0-398c-431f-ba1a-bf77d53f5146.png" style="height:360px;width:auto;" />
 
+* progress indicator
+
+```4d
+var $CLI : cs.CLI
+
+$CLI:=cs.CLI.new()
+
+$CLI.ES().XY(0; 0)
+
+$CLI.hideCursor()
+
+For ($i; 1; 100)
+	$CLI.CR().print(String($i; "^^0")+"%%").EL()
+	DELAY PROCESS(Current process; 1)
+End for 
+
+$CLI.showCursor()
+
+$CLI.LF()
+```
+
 # References
 
 https://blog.4d.com/headless-4d-applications/
