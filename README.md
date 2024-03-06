@@ -56,6 +56,23 @@ $CLI.showCursor()
 $CLI.LF()
 ```
 
+# Notes
+
+By default, diagnostic warnings (level 5) are printed to the console in headless mode. To filter these messages from the CLI, you might want to activate the diagnostic log file or else limit the information to errors (level 6).
+
+* Settings/logConfig.json
+
+```json
+{
+ "diagnosticLogs":{
+		"state" : 1,
+		"level" : 6
+ }
+}
+```
+
+c.f. https://developer.4d.com/docs/Debugging/debugLogFiles
+
 # References
 
 https://blog.4d.com/headless-4d-applications/
