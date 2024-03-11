@@ -7,7 +7,7 @@
 
 **Note**: On older versions of Windows you may need to set the `HKEY_CURRENT_USER\Console\VirtualTerminalLevel` registry key to `1` to activate [Console Virtual Terminal Sequences](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences?redirectedfrom=MSDN).
 
-c.f. https://superuser.com/questions/413073/windows-console-with-ansi-colors-handling
+c.f. https://superuser.com/questions/413073/windows-console-with-ansi-colors-handling  
 see also https://github.com/ytdl-org/youtube-dl/issues/15758
 
 To print unicode to the command prompt on the Windows command prompt you may need to `chcp 65001`.
