@@ -82,8 +82,8 @@ c.f. https://developer.4d.com/docs/Debugging/debugLogFiles
 
 # References
 
-https://blog.4d.com/headless-4d-applications/
+[Headless 4D applications](https://blog.4d.com/headless-4d-applications/)
 
-https://developer.4d.com/docs/Admin/cli/
+[Command Line Interface](https://developer.4d.com/docs/Admin/cli/)
 
-https://doc.4d.com/4Dv19/4D/19/Command-Line-Interface.300-5416693.en.html
+[A Tool for 4D Code Execution in CLI](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/)
