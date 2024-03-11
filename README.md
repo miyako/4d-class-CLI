@@ -5,6 +5,10 @@
 
 `LOG EVENT` wrapper class.
 
+**Note**: To enable ANSI escape sequences on Windows you may need to set the `HKEY_CURRENT_USER\Console\VirtualTerminalLevel` registry key to `1`.
+
+ c.f. https://superuser.com/questions/413073/windows-console-with-ansi-colors-handling
+
 # 8-bit and 16-bit colours
 
 A Simple API to print [ASCII escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).
