@@ -5,9 +5,11 @@
 
 `LOG EVENT` wrapper class.
 
-**Note**: To enable ANSI escape sequences on Windows you may need to set the `HKEY_CURRENT_USER\Console\VirtualTerminalLevel` registry key to `1`.
+**Note**: To enable ANSI escape sequences on the Windows command prompt you may need to set the `HKEY_CURRENT_USER\Console\VirtualTerminalLevel` registry key to `1`.
 
  c.f. https://superuser.com/questions/413073/windows-console-with-ansi-colors-handling
+
+To print unicode to the command prompt on the Windows command prompt you may need to `chcp 65001`.
 
 # 8-bit and 16-bit colours
 
